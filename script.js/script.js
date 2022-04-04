@@ -1,8 +1,8 @@
-var jet = document.getElementById("jet");
-var board = document.getElementById("board");
+let jet = document.getElementById("jet");
+let board = document.getElementById("board");
 
 window.addEventListener("keydown", (e) => {
-  var left = parseInt(window.getComputedStyle(jet).getPropertyValue("left"));
+  let left = parseInt(window.getComputedStyle(jet).getPropertyValue("left"));
   if (e.key == "ArrowLeft" && left > 0) {
     jet.style.left = left - 10 + "px";
   }
@@ -13,11 +13,11 @@ window.addEventListener("keydown", (e) => {
 
   if (e.key == "ArrowUp" || e.Spacekey == 32) {
     //32 is for space key
-    var bullet = document.createElement("div");
+    let bullet = document.createElement("div");
     bullet.classList.add("bullets");
     board.appendChild(bullet);
 
-    var movebullet = setInterval(() => {
+    let movebullet = setInterval(() => {
       var rocks = document.getElementsByClassName("rocks");
 
       for (var i = 0; i < rocks.length; i++) {
