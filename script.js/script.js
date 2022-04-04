@@ -21,7 +21,10 @@ window.addEventListener("keydown", (e) => {
       let rocks = document.getElementsByClassName("rocks");
 
       for (let i = 0; i < rocks.length; i++) {
+
+        let rock = rocks[i]
         var rock = rocks[i];
+
         if (rock != undefined) {
           var rockbound = rock.getBoundingClientRect();
           var bulletbound = bullet.getBoundingClientRect();
