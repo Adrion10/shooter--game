@@ -18,10 +18,10 @@ window.addEventListener("keydown", (e) => {
     board.appendChild(bullet);
 
     let movebullet = setInterval(() => {
-      var rocks = document.getElementsByClassName("rocks");
+      let rocks = document.getElementsByClassName("rocks");
 
-      for (var i = 0; i < rocks.length; i++) {
-        var rock = rocks[i];
+      for (let i = 0; i < rocks.length; i++) {
+        let rock = rocks[i];
         if (rock != undefined) {
           var rockbound = rock.getBoundingClientRect();
           var bulletbound = bullet.getBoundingClientRect();
